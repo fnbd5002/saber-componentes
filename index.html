@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ES">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC Info to Discord</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f5f7fa;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 26px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            color: #555;
+            margin: 10px 0;
+            padding: 0;
+        }
+
+        #footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #888;
+        }
+
+        .highlight {
+            color: #007bff;
+            font-weight: 600;
+        }
+
+        .spinner {
+            border: 6px solid #f3f3f3;
+            border-top: 6px solid #3498db;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            }
+
+            h1 {
+                font-size: 22px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>System Information</h1>
+        <div class="spinner" id="spinner"></div>
+        <p id="os">Operating System: <span class="highlight"></span></p>
+        <p id="browser">Browser: <span class="highlight"></span></p>
+        <p id="arch">Architecture: <span class="highlight"></span></p>
+        <p id="cores">CPU Cores: <span class="highlight"></span></p>
+        <p id="language">Language: <span class="highlight"></span></p>
+        <p id="gpu">GPU: <span class="highlight"></span></p>
+        <p id="ip">IP Address: <span class="highlight"></span></p>
+        <div id="footer">Collecting system information...</div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
